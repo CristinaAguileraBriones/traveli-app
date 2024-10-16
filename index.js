@@ -5,9 +5,7 @@ const morgan = require("morgan")
 const cors = require("cors") //falta iniciar cors
 const mongoose = require("mongoose")
 
-// //app.use(cors({
-//     origin: "*"
-// }))
+
 
 //conexión a la base de datos
 mongoose.connect("mongodb://127.0.0.1:27017/traveli-bbdd")
@@ -27,6 +25,10 @@ app.use(morgan("dev"))
 app.use(express.json()) //para poder recibir de clientes objetos en json
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: false})) //reconocer llamadas
+
+app.use(cors({
+    origin: (process.env.ORIGIN)
+  }))
 
 //ruta de prueba
 app.get("/", (req, res)=>{
@@ -62,7 +64,7 @@ app.get("/user/:userId", async (req, res)=>{
 
     try {
 
-        const response = User.findById(re.params.userId)
+        const response = await User.findById(req.params.userId)
         res.json(response)
         
     } catch (error) {
@@ -70,6 +72,19 @@ app.get("/user/:userId", async (req, res)=>{
     }
     
 })
+
+//Borrar a un usuario PROBAR EN POSTMAN
+
+app.delete("/user/:userId", async (req, res)=>{
+    try {
+        await User.findByIdAndDelete(req.params.userId)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+//UPDATE
+//RUTA PARA EDITAR UNA PROPIEDAD DEL DOCUMENTO
 
 
 //IMPLEMENTACION DE LA API EXTERNA
