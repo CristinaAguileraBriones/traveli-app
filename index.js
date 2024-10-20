@@ -20,26 +20,26 @@ app.use("/api", indexRouter)
 
 
 
-const getToken = async () => {
-    try {
-      const response = await axios.post('https://test.api.amadeus.com/v1/security/oauth2/token', {
-        grant_type: 'client_credentials',
-        client_id: process.env.API_KEY,
-        client_secret: process.env.API_SECRET
-      }, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      });
+// const getToken = async () => {
+//     try {
+//       const response = await axios.post('https://test.api.amadeus.com/v1/security/oauth2/token', {
+//         grant_type: 'client_credentials',
+//         client_id: process.env.API_KEY,
+//         client_secret: process.env.API_SECRET
+//       }, {
+//         headers: {
+//           'Content-Type': 'application/x-www-form-urlencoded'
+//         }
+//       });
 
 
       
-      return response.data.access_token;  // Devuelve el token
+//       return response.data.access_token;  // Devuelve el token
    
-    } catch (error) {
-      console.error('Error getting token:', error);
-    }
-  };
+//     } catch (error) {
+//       console.error('Error getting token:', error);
+//     }
+//   };
 
 //   getToken().then(token => {
 //     console.log('Token obtenido correctamente:', token);

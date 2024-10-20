@@ -7,10 +7,10 @@ const userSchema = new mongoose.Schema({
     name: {type: String, required: [true, "el nombre es obligatorio"], unique: true},
     password: {type: String, required: [true, "la contraseña es obligatoria"]},
     email: {type: String, required: [true, "El email es obligatorio"], unique: true, lowercase: true, trim: true},
-    profile_image: {type:String, required: [true, 'La imagen es obligatoria.']},
+    profile_image: {type:String},
     favoritos: [{type: Schema.Types.ObjectId, ref: 'Reserva'}]},
 
-   {timestamp: true} 
+    {timestamps: true}
 )
 //creacion de modelo
 const User = mongoose.model("User", userSchema)

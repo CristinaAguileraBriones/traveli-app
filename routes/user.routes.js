@@ -4,7 +4,7 @@ const {verifyToken} = require("../middleware/auth.middleware")
 
 const User= require("../models/user.model");
 
-//GET todos los usuarios
+//GET todos los usuarios //FUNCIONA 
 router.get("/", verifyToken, async (req, res, next)=>{
     try {
         const response = await User.find()

@@ -6,10 +6,10 @@ const router = express.Router()
 
 const {verifyToken}= require("../middleware/auth.middleware")
 
-// POST "/api/auth/signup" : crea al usuario con sus datos
+// POST "/api/auth/signup" : crea al usuario con sus datos //FUNCIONA
 router.post("/signup", async (req, res, next) => {
   // Validaciones de backend
-  const { name, password, email } = req.body;
+  const { name, password, email, profile_image } = req.body;
 
   // Campos obligatorios
   if (!email || !name || !password) {
@@ -62,7 +62,7 @@ router.post("/signup", async (req, res, next) => {
   }
 })
 
-// POST "/api/auth/login" : verifica que ese usuario existe y lo deja entrar si el token es correcto
+// POST "/api/auth/login" : verifica que ese usuario existe y lo deja entrar si el token es correcto //FUNCIONA
 router.post("/login", async (req, res, next) => {
     const { password, email } = req.body
     console.log(email, password)
@@ -122,7 +122,7 @@ router.post("/login", async (req, res, next) => {
     }
 })
 
-//GET verify
+//GET verify //FUNCIONA
 //protegiendo la ruta con un middleware
 router.get("/verify", verifyToken, (req, res)=>{
 
