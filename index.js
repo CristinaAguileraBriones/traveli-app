@@ -11,6 +11,7 @@ configuration(app)
 require("./db/index.js")
 
 
+
 //rutas
 const indexRouter = require("./routes/index.routes")
 app.use("/api", indexRouter)

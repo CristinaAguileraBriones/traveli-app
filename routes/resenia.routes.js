@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Resenia = require("../models/Resenia");
-const { verifyToken } = require("../middlewares/auth.middlewares.js");
+const Resenia = require("../models/resenia.model.js");
+const { verifyToken } = require("../middleware/auth.middleware.js");
 
 // GET todas las reseñas
 router.get("/", async (req, res, next) => {

@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const Reserva = require("../models/reserva");
+const Reserva = require("../models/reserva.model");
 
-const { verifyToken} = require("../middlewares/auth.middlewares.js");
+const { verifyToken} = require("../middleware/auth.middleware.js");
 
 // GET todas las reservas
 router.get("/", async (req, res, next) => {
@@ -51,7 +51,7 @@ router.post("/addReserva", verifyToken, async (req, res, next) => {
 });
 
 // DELETE eliminar una reserva específica
-router.delete("/:reservaId", verifyToken, verifyAdmin, async (req, res, next) => {
+router.delete("/:reservaId", verifyToken, async (req, res, next) => {
   try {
     const response = await Reserva.findByIdAndDelete(req.params.reservaId);
     if (!response) {

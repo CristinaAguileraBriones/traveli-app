@@ -1,8 +1,8 @@
 const express= require("express");
 const router=express.Router();
-const {verifyToken} = require("../middlewares/auth.middlewares.js")
+const {verifyToken} = require("../middleware/auth.middleware")
 
-const User= require("../models/User.model");
+const User= require("../models/user.model");
 
 //GET todos los usuarios
 router.get("/", verifyToken, async (req, res, next)=>{
@@ -111,7 +111,7 @@ router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
     try {
       const { reservaId } = req.params;
         const response = await User.find({reserva: reservaId})
-        .populate('favoritas')
+        .populate('favoritos')
 
         if(response.length === 0) {
           return res.status(404).json({message: 'Este alojamiento aún no se ha añadido a ninguna lista de favoritos'})
@@ -122,7 +122,7 @@ router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
     }
   })
 
-  router.post("/profile/wishlist", verifyToken, async (req, res, next) => {
+  router.post("/profile/favoritos", verifyToken, async (req, res, next) => {
     try {
     
     const {reservasId} =req.body;
@@ -132,7 +132,7 @@ router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
         userId,
         { $addToSet: { favoritos: reservasId } }, 
         { new: true }
-      ).populate('wishlist');
+      ).populate('favoritos');
   
 
       res.status(200).json({favoritos: updatedUser.favoritos });
@@ -144,66 +144,5 @@ router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //new routes 
   
-
-
-
-  //----------wishList----------
-
-  router.post("/profile/wishlist", verifyToken, async (req, res, next) => {
-    try {
-    
-    const {viviendasId} =req.body;
-    const userId = req.payload._id;
-
-      const updatedUser = await User.findByIdAndUpdate(
-        userId,
-        { $addToSet: { wishlist: viviendasId } }, 
-        { new: true }
-      ).populate('wishlist');
-  
-
-      res.status(200).json({wishlist: updatedUser.wishlist });
-    }catch (error) {
-      console.log(error)
-    }
-  })
-
-  //delete wishlist
-  router.delete("/profile/wishlist/:viviendasId", verifyToken, async (req, res, next) => {
-    try {
-      const { viviendasId } = req.params;
-      const userId = req.payload._id;
-  
-     
-      const updatedUser = await User.findByIdAndUpdate(
-        userId,
-        { $pull: { wishlist: viviendasId } },
-        { new: true }
-      ).populate('wishlist');
-  
-      res.status(200).json({ wishlist: updatedUser.wishlist });
-    } catch (error) {
-      next(error);
-    }
-  });
-
 module.exports=router;

@@ -1,18 +1,22 @@
-const express = require("express")
-const router = express.Router()
-//modelo reserva por utilizar
-//const Reserva=require("../models/reserva.model.js")
+const router = require("express").Router()
+
 
 //ruta de prueba
-router.get("/", (req, res)=>{
+router.get("/", (req, res, next)=>{
     
-    res.send("Esto es una prueba, servidor express arrancando")
+    res.json("Esto es una prueba, servidor express arrancando")
 })
 
 
 //Usuarios
 const userRouter = require("./user.routes.js")
 router.use("/user", userRouter)
+//Reserva
+const reservaRouter = require("./reserva.routes.js")
+router.use("/reserva", reservaRouter)
+//Resenia
+const reseniaRouter = require("./resenia.routes.js")
+router.use("/resenia", reseniaRouter)
 
 const authRouter = require("./auth.routes")
 router.use("/auth", authRouter)
