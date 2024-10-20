@@ -1,0 +1,536 @@
+[{
+ 
+  "name": "Sunset Paradise Resort",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-554211241906940281/original/6b0519fe-aa71-4f65-90e1-2ee245e18770.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-554211241906940281/original/18183252-3fa3-4810-8485-60a1a88bc3b4.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-554211241906940281/original/11436a6c-9536-4679-9b05-baa556fbd8ba.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-554211241906940281/original/0fdb429e-f487-4476-954e-b078ba9dd7bd.jpeg?im_w=1200"
+  ],
+  "description": "A beautiful resort with stunning sunset views. Enjoy luxury amenities including a full kitchen, pool, and elevator access.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "123 Ocean Drive, Miami Beach, FL 33139",
+  "price": 120
+},
+{
+  
+  "name": "Mountain View Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1097176626057926676/original/edc9ab0c-c5a6-4b18-a143-6302819af3d5.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-945572117526561588/original/f1963e79-5876-46fd-8bc8-0fa336d682a6.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-945572117526561588/original/ee997303-c01e-4201-8446-0e2c6b67bafd.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1097176626057926676/original/00128749-97b8-4920-8470-e490a3659801.jpeg?im_w=1200"
+  ],
+  "description": "Spacious apartments with a breathtaking view of the mountains. Perfect for a relaxing getaway with modern amenities.",
+  "petsAllowed": false,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "456 Hilltop Lane, Boulder, CO 80302",
+  "price": 135
+},
+{
+  
+  "name": "City Center Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1130632705326608366/original/0efe82cf-8ae5-422c-a7bd-8d5a7606c052.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1025775067818659597/original/7aed36e9-0e6e-4b43-8620-665dd1d5d197.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1130632705326608366/original/77bd86a2-cecc-49fe-b92c-8dc76058269f.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1130632705326608366/original/061edc75-6a98-4b19-b84e-8cd572cfb947.jpeg?im_w=1200"
+  ],
+  "description": "Conveniently located hotel in the heart of the city. Ideal for business travelers and tourists alike with full handicap access.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "789 Main St, San Francisco, CA 94105",
+  "price": 155
+},
+{
+  
+  "name": "Lakefront Luxury Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1072459209557991875/original/24c8c6e0-99df-4a48-bc91-47058bcab54f.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1072459209557991875/original/2d216a1b-e7ad-42a2-8f48-4a63f80f3a66.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1072459209557991875/original/da82b73d-3297-4609-921c-28b042e2df9e.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1072459209557991875/original/6f8d717c-074b-43a4-95c0-730c64533cbe.jpeg?im_w=1200"
+  ],
+  "description": "Luxury apartments with a serene lakefront view. Features modern interiors, full kitchen, and a private pool.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "321 Lake Ave, Chicago, IL 60601",
+  "price": 175
+},
+{
+ 
+  "name": "Desert Oasis Resort",
+  "image": [
+    "https://a0.muscache.com/im/pictures/b3cfd561-7488-4abd-b570-ace8330ec8ab.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/c8268999-7eb9-4177-a87c-f01fdc1dbfec.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/c51b4c73-9169-4508-a976-8a802accf27c.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/8c543867-413e-493f-9d27-6e13fde74df8.jpg?im_w=1200"
+  ],
+  "description": "An oasis in the desert with luxurious amenities. Enjoy the pool and scenic desert views, ideal for a tranquil vacation.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "1234 Sand Dune Rd, Palm Springs, CA 92262",
+  "price": 180
+},
+{
+ 
+  "name": "Historic Downtown Inn",
+  "image": [
+    "https://a0.muscache.com/im/pictures/9360f015-9278-45d6-b696-4b6d187cda12.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/734834ec-b6ed-441d-b325-d40bc8a1d12b.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/c0d7dd52-3fb7-4f42-8f4a-b266fe9eb335.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/5b98c470-3e54-43b2-aadc-60c7edfa21ba.jpg?im_w=1200"
+  ],
+  "description": "Charming inn located in the historic downtown area. Offers modern comforts with a touch of historic charm.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "5678 Heritage Blvd, Charleston, SC 29401",
+  "price": 90
+},
+{
+ 
+  "name": "Tropical Getaway Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/36d8007a-0de5-439d-9fec-1c2d7b53a147.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/97108083-280f-4e0e-9f1b-7a4b0dd34c44.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-34113796/original/1ab1f19b-f634-4e19-8a0f-a888b5f207e8.jpeg?im_w=1200"
+  ],
+  "description": "Relax in tropical paradise with these modern apartments. Features a pool, spacious rooms, and beautiful garden views.",
+  "petsAllowed": false,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "910 Coconut Grove, Honolulu, HI 96815",
+  "price": 150
+},
+{
+ 
+  "name": "Urban Loft Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-646359449952373080/original/aade014c-23b7-4fd4-9c5b-232955b83674.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-646359449952373080/original/cad70e0e-432a-47b2-b583-92a2dd6b8a57.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/08793aa9-1fff-4a18-8e1c-ff540984595c.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-646359449952373080/original/0a99525d-e3e7-48b8-885c-5fe2d7bb6653.jpeg?im_w=1200"
+  ],
+  "description": "Stylish hotel with modern amenities in the urban center. Pet-friendly and handicap accessible, ideal for city explorers.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "1111 Metropolis Ave, New York, NY 10001",
+  "price": 200
+},
+{
+
+  "name": "Seaside Escape Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1160125480520463684/original/f6d41487-076e-4735-ae3d-e70f526bdece.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1160125480520463684/original/6983196e-7190-41eb-afb3-6fe0c64a4754.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1160125480520463684/original/974702ef-bc10-4bb0-b3a6-c3634ac81729.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1160125480520463684/original/bce72f43-e642-4f9b-b166-d8fbc54ad67a.jpeg?im_w=1200"
+  ],
+  "description": "Cozy apartments with a beautiful seaside view. Perfect for a quiet retreat with modern amenities and pet-friendly policies.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "2222 Ocean Breeze Blvd, Santa Monica, CA 90401",
+  "price": 140
+},
+{
+
+  "name": "Countryside Retreat Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/19505435/d987bffa_original.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/airflow/Hosting-887994/original/158c2264-cc25-4b9e-8ac8-df34487ac41f.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/airflow/Hosting-887994/original/cf2102e0-0b98-4515-8571-9c708573c764.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/airflow/Hosting-887994/original/65e572d2-e832-4050-b584-319d639aca5a.jpg?im_w=1200"
+  ],
+  "description": "Escape to the countryside and relax in luxury. Enjoy the serene environment with full amenities including a pool.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "3333 Meadow Lane, Lexington, KY 40509",
+  "price": 210
+},
+{
+
+  "name": "Riverside Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/d43bbd3d-4f82-4f8f-ac5a-83cdb52293eb.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/2c78057e-f7cc-4992-91b8-a4ed4ac0af1f.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/aae184c4-e744-4158-a5b8-728d50152b71.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/fa0e03f4-adab-4a1f-a92e-546f9f06fc16.jpg?im_w=1200"
+  ],
+  "description": "Modern apartments with a stunning river view. Full kitchen and pet-friendly, ideal for both short and long-term stays.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "4444 River Road, Portland, OR 97205",
+  "price": 95
+},
+{
+  
+  "name": "Eco-Friendly Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-863204970572276693/original/5669a562-09e4-466e-9784-42971211561b.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-863204970572276693/original/601019ed-40e6-4f9f-aa37-384962acf347.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/da070936-7f0e-46e9-b981-8f5664c0b7ae.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/2b8dc095-3e8f-48fb-b8bb-e697a3d2b70c.jpg?im_w=1200"
+  ],
+  "description": "Stay green at our eco-friendly hotel. Experience comfort and sustainability with full handicap access and modern amenities.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "5555 Green Way, Austin, TX 78701",
+  "price": 220
+},
+{
+  
+  "name": "Ski Lodge Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/bed992f3-cea8-408a-82bc-99078f76bf57.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/649714f3-888a-4ae8-af34-a7b2a9e0c7ca.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/81aee577-c8cc-445b-be64-8279769214fe.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/a95f6b31-b689-49b3-9bc1-c5ede090c0a7.jpg?im_w=1200"
+  ],
+  "description": "Cozy apartments located near the best ski slopes. Perfect for winter sports enthusiasts with modern amenities and a full kitchen.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "6666 Snowy Ridge, Aspen, CO 81611",
+  "price": 110
+},
+{
+  
+  "name": "Beachfront Bliss Resort",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-572103741139745432/original/f7dfb918-f52d-434d-8877-14e34fb05d62.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-572103741139745432/original/383008b4-e4fb-4a0b-98b4-f97d23bd9821.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-572103741139745432/original/e8acad17-7356-48f5-aaf5-cf8eb90361aa.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-572103741139745432/original/f7dfb918-f52d-434d-8877-14e34fb05d62.jpeg?im_w=1200"
+  ],
+  "description": "Luxurious beachfront resort with amazing views. Enjoy the pool, full kitchen, and luxurious living spaces.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "7777 Beach Blvd, Malibu, CA 90265",
+  "price": 220
+},
+{
+  
+  "name": "Downtown Suites",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1051945180134067169/original/0b398a58-cf56-4e67-bb62-d8c572c5025e.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1051945180134067169/original/a6018938-7793-4623-b187-622d848ac528.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1051945180134067169/original/afd73850-a912-4ca5-b5eb-d7e2f4ea9e44.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1051945180134067169/original/c055be1d-95bd-498d-b0aa-15f41c59da9d.jpeg?im_w=1200"
+  ],
+  "description": "Modern suites located in the heart of downtown. Ideal for business or leisure with pet-friendly policies and full handicap access.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "8888 City Center, Atlanta, GA 30303",
+  "price": 185
+},
+{
+  
+  "name": "Mountain Cabin Retreat",
+  "image": [
+    "https://a0.muscache.com/im/pictures/3a544c1b-5708-4dd8-aeb5-b7b260129d95.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/a22ee143-942d-45d0-af0d-76b000d19e73.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-25901389/original/a7b167ff-a19a-4abc-9e00-50f4a6ca4ec0.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/fd4cb6f6-171a-4d1a-b3a9-81574842b38d.jpg?im_w=1200"
+  ],
+  "description": "Rustic cabins nestled in the mountains. Experience nature with modern comforts including a full kitchen.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "9999 Timber Trail, Jackson, WY 83001",
+  "price": 125
+},
+{
+  
+  "name": "Urban Boutique Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODIwODk2Nzc4NTAzODk3OTIw/original/282c3db9-8950-4334-949e-24e62ba49a7f.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-820896778503897920/original/7b8d8780-eeeb-4e14-a4b8-647404153c2e.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODIwODk2Nzc4NTAzODk3OTIw/original/5860dfea-5c0c-436a-a81b-7a77162d110f.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODIwODk2Nzc4NTAzODk3OTIw/original/d231b153-b78e-4c88-9d25-3e8ef8935911.jpeg?im_w=1200"
+  ],
+  "description": "Chic boutique hotel in a vibrant urban setting. Enjoy luxury and comfort with modern amenities and handicap access.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "1010 Arts District, Los Angeles, CA 90013",
+  "price": 210
+},
+{
+  
+  "name": "Lakeview Villas",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1069433537073046428/original/b3e2a49b-1259-41f3-bbe2-5ac8be707166.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1069433537073046428/original/bcde2a20-6241-4052-9d65-9c596f58e3ba.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1069433537073046428/original/2a7b1ba0-85aa-4796-ae63-4af3b6cf5348.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1069433537073046428/original/b076c775-dda4-4936-966e-f9ea1e256d00.jpeg?im_w=1200"
+  ],
+  "description": "Exclusive villas with a breathtaking view of the lake. Full kitchen, private pool, and luxurious living spaces.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "1212 Lakeside Dr, Orlando, FL 32801",
+  "price": 270
+},
+{
+  
+  "name": "Historic Castle Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/58491253/4f4cc019_original.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/cad08cb4-43cd-4888-b65c-6321de9acb87.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/bc6c6764-6983-468b-a7f9-1481b473b575.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/6437491/8e0abf42_original.jpg?im_w=1200"
+  ],
+  "description": "Stay in a historic castle with modern amenities. Enjoy a unique experience with full handicap access and luxurious accommodations.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "1313 Old Town Rd, Salem, MA 01970",
+  "price": 190
+},
+{
+  
+  "name": "Desert Mirage Resort",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-5488028/original/6d807783-4eea-497e-8786-c3ab382f9123.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-5488028/original/31c4e98c-2552-46db-b118-a24f973089e1.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-5488028/original/0acd1ca2-15b7-47d6-9122-02641b19c0d5.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-5488028/original/f263be4a-86fe-4613-a219-1fd565f169a6.jpeg?im_w=1200"
+  ],
+  "description": "Luxurious resort in the desert with stunning views. Enjoy modern amenities including a pool, full kitchen, and elevator.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "1414 Mirage Rd, Phoenix, AZ 85004",
+  "price": 250
+},
+{
+  
+  "name": "Country Inn",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-41755156/original/1fcc336c-c3b7-4a01-be8f-47e6f8627dbc.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-41755156/original/55a940b7-b5e4-4c12-985a-876a5d4d5cfe.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-41755156/original/b189f351-c37d-4d89-8e70-e8affbe2d440.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-41755156/original/ba82e22b-42d0-44fb-a480-26fe2acedb7b.jpeg?im_w=1200"
+  ],
+  "description": "Charming country inn with modern comforts. Perfect for a peaceful retreat with pet-friendly policies and full kitchen access.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "1515 Country Lane, Asheville, NC 28801",
+  "price": 90
+},
+{
+  
+  "name": "Luxury Penthouse Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/bd73f0f8-9057-4bbc-ad70-1db13eb5c03f.png?im_w=1920&im_q=highq",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/3de42c30-b582-450a-a94c-ad1512966fcf.jpeg?im_w=2560&im_q=highq",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/9fea4ea4-7c9c-428a-9479-eb24d1ee90c0.jpeg?im_w=2560&im_q=highq",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/1b343cc6-8919-48e2-8c4f-1e1bb551773f.jpeg?im_w=2560&im_q=highq"
+  ],
+  "description": "Exclusive penthouse apartments with panoramic views. Full kitchen, private pool, and luxurious living spaces.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "1616 High Rise Blvd, Dallas, TX 75201",
+  "price": 140
+},
+{
+  
+  "name": "Mountain Serenity Lodge",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-679718565993504394/original/003f9953-0f6c-43de-95f8-2bbbc1ac93c0.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-679718565993504394/original/e0f6b4a1-3183-47d7-8bff-51f3c3f62b24.png?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-679718565993504394/original/c137d246-c2bb-45b0-a71e-83a477ab201d.png?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-679718565993504394/original/c3708226-7631-4b4d-8a91-b8e8073d3401.jpeg?im_w=1200"
+  ],
+  "description": "Perched high in the majestic mountains, Mountain Serenity Lodge offers a tranquil retreat surrounded by nature's beauty. Each cabin is elegantly furnished and equipped with modern amenities, ensuring a comfortable stay. Guests can enjoy breathtaking views, hiking trails, and cozy evenings by the fireplace. This lodge is perfect for nature lovers and those seeking a peaceful escape.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": true,
+  "address": "789 High Mountain Road, Aspen, CO 81611",
+  "price": 225
+},
+{
+  
+  "name": "Cityscape Luxury Apartments",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-663684201927336298/original/e9397050-c635-4e5f-b77d-4a11c6f382bc.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-663684201927336298/original/edf141fc-986f-4a34-96b2-7698a1eaaa53.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-663684201927336298/original/42692ac1-9009-49a1-bdf7-ed4556aa9c17.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-663684201927336298/original/95b2cd37-e267-40fb-b7b5-0c6b43e07ef5.jpeg?im_w=1200"
+  ],
+  "description": "Located in the heart of the bustling city, Cityscape Luxury Apartments offer a chic urban living experience. Each apartment boasts modern decor, state-of-the-art appliances, and panoramic city views. Residents can enjoy access to a rooftop pool, fitness center, and exclusive lounge. This is the ideal spot for urban professionals and those who thrive in a vibrant city environment.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "123 Main Street, New York, NY 10001",
+  "price": 210
+},
+{
+  
+  "name": "Riverside Country House",
+  "image": [
+    "https://a0.muscache.com/im/pictures/4106b030-0274-42ac-b6d9-4b71ae154df7.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/7ba6b480-4995-4db7-bf94-94e7be488163.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/4813361e-595d-4e45-956d-ef4bbc37f3d3.jpg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/c68a23cb-3639-413a-92f1-7a0f9813d63d.jpg?im_w=1200"
+  ],
+  "description": "Nestled by a serene river, Riverside Country House provides a rustic yet luxurious experience. The house features spacious rooms with antique furnishings, a fully equipped kitchen, and a charming garden. Guests can enjoy activities such as fishing, kayaking, and nature walks. This country house is perfect for those looking to escape the city and relax in a picturesque setting.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "456 Riverside Drive, Burlington, VT 05401",
+  "price": 135
+},
+{
+  "_id": {
+    "$oid": "66587898251c49796e7e2823"
+  },
+  "name": "Ocean Breeze Hotel",
+  "image": [
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51077085/original/69b58754-22fe-4848-898e-ad5f8328e786.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51077085/original/94e82fd5-a667-4ce3-a0bf-9249e5012e16.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51077085/original/3ff69462-754a-4bbf-a9a7-491a73ffb8f8.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51077085/original/74cf08d1-d6a4-4a4d-b72e-7b54df015563.jpeg?im_w=1200"
+  ],
+  "description": "Set on the picturesque coast, Ocean Breeze Hotel offers a perfect blend of luxury and relaxation. With rooms that offer panoramic sea views, a beachfront restaurant serving gourmet dishes, and an infinity pool overlooking the ocean, this hotel ensures a memorable stay. Guests can enjoy water sports, spa treatments, and sunset cruises. Ideal for romantic getaways and family vacations alike.",
+  "petsAllowed": true,
+  "handicapAccessible": true,
+  "kitchenAvailable": false,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "789 Seaside Avenue, Santa Monica, CA 90401",
+  "price": 230
+},
+{
+  "_id": {
+    "$oid": "665878af251c49796e7e2825"
+  },
+  "name": "Forest Haven Retreat",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-29357003/original/1bc1448c-3922-462e-a3f6-2571ad9ccf2d.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-29357003/original/06f61abb-7285-435b-a244-4ded0aa59b7d.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-29357003/original/6faba490-1a75-42b2-a286-994f98693662.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/09962223-494b-42cd-adb1-503c2d656777.jpg?im_w=1200"
+  ],
+  "description": "Surrounded by towering trees and tranquil nature, Forest Haven Retreat provides an escape from the hustle and bustle of everyday life. This retreat features cozy cabins with fireplaces, a communal lodge with a library and board games, and numerous hiking trails. Guests can reconnect with nature, observe local wildlife, and enjoy peaceful solitude.",
+  "petsAllowed": true,
+  "handicapAccessible": false,
+  "kitchenAvailable": true,
+  "elevatorAvailable": false,
+  "poolAvailable": false,
+  "isLuxurious": false,
+  "address": "123 Forest Lane, Asheville, NC 28801",
+  "price": 140
+},
+{
+  
+  "name": "Skyline Penthouse",
+  "image": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-39682875/original/f0283bde-4a5c-4e37-bbfb-282c3e01c324.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-39682875/original/5e6db08d-422d-436f-ad6d-3972f618b96d.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mzk2ODI4NzU%3D/original/a61df5ce-8c10-41e8-b7d2-8ccf5b923bef.jpeg?im_w=1200",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-39682875/original/eb06e611-1790-41fb-b59e-c065b18e93f6.jpeg?im_w=1200"
+  ],
+  "description": "Located at the top of a high-rise, Skyline Penthouse offers unparalleled views of the city skyline. This penthouse is designed with modern luxury in mind, featuring floor-to-ceiling windows, a private rooftop terrace, and a sleek, fully equipped kitchen. Residents have access to a fitness center, a rooftop pool, and concierge services. Perfect for those seeking an urban lifestyle with a touch of elegance.",
+  "petsAllowed": false,
+  "handicapAccessible": true,
+  "kitchenAvailable": true,
+  "elevatorAvailable": true,
+  "poolAvailable": true,
+  "isLuxurious": true,
+  "address": "456 High Street, Chicago, IL 60611",
+  "price": 175
+}]
