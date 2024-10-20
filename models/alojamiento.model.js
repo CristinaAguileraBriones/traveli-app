@@ -17,4 +17,4 @@ const alojamientoSchema = new Schema({
 
 const Alojamiento = mongoose.model("Alojamiento", alojamientoSchema);
 
-module.exports = Alojamiento;
+module.exports = Alojamiento

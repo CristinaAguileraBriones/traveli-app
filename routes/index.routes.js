@@ -17,6 +17,9 @@ router.use("/reserva", reservaRouter)
 //Resenia
 const reseniaRouter = require("./resenia.routes.js")
 router.use("/resenia", reseniaRouter)
+//Alojamientos
+const alojamientoRouter = require("./alojamiento.routes.js")
+router.use("/alojamiento", alojamientoRouter)
 
 const authRouter = require("./auth.routes")
 router.use("/auth", authRouter)

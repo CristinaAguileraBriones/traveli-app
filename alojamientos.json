@@ -474,9 +474,7 @@
   "price": 135
 },
 {
-  "_id": {
-    "$oid": "66587898251c49796e7e2823"
-  },
+  
   "name": "Ocean Breeze Hotel",
   "image": [
     "https://a0.muscache.com/im/pictures/prohost-api/Hosting-51077085/original/69b58754-22fe-4848-898e-ad5f8328e786.jpeg?im_w=1200",
@@ -495,9 +493,7 @@
   "price": 230
 },
 {
-  "_id": {
-    "$oid": "665878af251c49796e7e2825"
-  },
+  
   "name": "Forest Haven Retreat",
   "image": [
     "https://a0.muscache.com/im/pictures/miso/Hosting-29357003/original/1bc1448c-3922-462e-a3f6-2571ad9ccf2d.jpeg?im_w=960",
