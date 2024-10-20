@@ -3,7 +3,7 @@ const Reserva = require('../models/reserva.model');
 const router = express.Router();
 const { verifyToken } = require('../middleware/auth.middleware'); 
 
-// GET "/api/reservas" - Obtener las reservas del usuario autenticado
+// GET "/api/reservas" - Obtener las reservas del usuario autenticado FUNCIONA
 router.get("/", verifyToken, async (req, res, next) => {
   try {
     const userId = req.payload._id; 
@@ -17,7 +17,7 @@ router.get("/", verifyToken, async (req, res, next) => {
 });
 
 
-// POST nueva reserva
+// POST nueva reserva FUNCIONA
 
 router.post("/addReserva", verifyToken, async (req, res, next) => {
   try {
