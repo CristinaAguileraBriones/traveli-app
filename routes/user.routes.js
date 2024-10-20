@@ -1,114 +1,209 @@
-const express = require("express")
-const router = express.Router()
+const express= require("express");
+const router=express.Router();
+const {verifyToken} = require("../middlewares/auth.middlewares.js")
 
-//modelos
+const User= require("../models/User.model");
 
-const User=require("../models/user.model.js")
+//GET todos los usuarios
+router.get("/", verifyToken, async (req, res, next)=>{
+    try {
+        const response = await User.find()
+        res.status(200).json(response);
+        
+    } catch (error) {
+        next(error);
+    }
+});
 
-//Crear usuario
-router.post("/", (req, res)=>{
-
-    User.create({
-        name: req.body.name,
-        password: req.body.password,
-        email: req.body.email
-    })
-    .then(()=>{
-        res.send("usuario creado")
-    })
-    .catch(error=>{
-        res.status(500).send("Error al crear el usuario")
-    })
-
-   
-})
-//buscar todos los usuarios completos
-router.get("/user/all", async(req, res)=>{
-
-   try {
-    const response = await User.find()
-    res.json(response)
+//GET /api/user/profile perfiles de usuario
+router.get("/profile", verifyToken, async(req, res, next) => {
     
-   } catch (error) {
-    console.log(error, "No se pueden ver los usuarios creados")
-   }
+    try{
+        const { _id, name, password, email, profile_image, favoritos } = req.payload;
+    res.status(200).json({
+        message: "Datos del usuario",
+        user: { _id,  name, password, email, profile_image, favoritos}
+    })
+}catch(error){
+    next(error)
+}
 })
 
-//buscar usuario por email
-router.get("/user/email", async(req, res)=>{
+//GET /api/user/:userId buscar individualmente por id a cada usuario
+router.get("/:userId", verifyToken, async (req, res, next)=>{
     try {
-      const response = await User.find()
-      .select({email: 1})  
-    } catch (error) {
-        console.log(error, "No se han encontrado los emails de los usuarios")
-    }
-})
-//buscar usuario por nombre ordenado alfabéticamente
-router.get("/user/name", async(req, res)=>{
-    try {
-      const response = await User.find()
-      .select({name: 1})
-      .sort({name: 1})
-    } catch (error) {
-        console.log(error, "no se han encontrado los nombres")
-    }
-})
-
-//busqueda de querys por el usuario
-router.get("/search", async(req, res)=>{
-    try {
-      const response = await User.find(req.query)
-    } catch (error) {
-        console.log(error, "no se han encontrado los usuarios con los parametros que tu buscabas")
-    }
-})
-
-
-//buscar todos los detalles de un usuario 
-router.get("/user/:userId", async (req, res)=>{
-
-    try {
-
         const response = await User.findById(req.params.userId)
-        res.json(response)
+
+        res.status(200).json(response);
         
     } catch (error) {
-        console.log(error)
+        next(error);
     }
+});
+//PUT /api/user/:userId  Actualizar usuario
+router.put("/:userId", verifyToken, async(req, res, next)=>{
+    try {
+        const response= await User.findByIdAndUpdate( req.params.userId, {
+            name:req.body.name,
+            favoritos: req.body.favoritos,
+            profile_image: req.body.profile_image
+        }, {new: true});
+
+        res.status(202).json(response);
+    } catch (error) {
+        next(error)
+    }
+})
+//PATCH /api/profile/name actualizar nombre
+router.patch("/profile/username", verifyToken, async (req, res, next) => {
+    try {
+  
+      
+      const {name} = req.body;
+  
+      
+      const updatedUser = await User.findByIdAndUpdate(
+        req.payload._id,
+        {name},
+        { new: true } 
+      );
+  
+      if (!updatedUser) {
+        return res.status(404).json({ message: 'Usuario no encontrado' });
+      }
+  
+      res.status(200).json({
+        message: 'Nombre actualizado',
+        user: updatedUser
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
+//PATCH /api/profile/email actualizar email
+router.patch("/profile/email", verifyToken, async (req, res, next) => {
+    try {
+  
+      const { email} = req.body;
+  
+      const updatedUser = await User.findByIdAndUpdate(
+        req.payload._id,
+        { email},
+        { new: true } 
+      );
+  
+      if (!updatedUser) {
+        return res.status(404).json({ message: 'Usuario no encontrado' });
+      }
+  
+      res.status(200).json({
+        message: 'Email actualizado',
+        user: updatedUser
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
+
+// populate(reservasId)
+
+router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
+    try {
+      const { reservaId } = req.params;
+        const response = await User.find({reserva: reservaId})
+        .populate('favoritas')
+
+        if(response.length === 0) {
+          return res.status(404).json({message: 'Este alojamiento aún no se ha añadido a ninguna lista de favoritos'})
+        }
+     res.status(200).json(response)
+    }catch(error) {
+      next(error)
+    }
+  })
+
+  router.post("/profile/wishlist", verifyToken, async (req, res, next) => {
+    try {
     
-})
+    const {reservasId} =req.body;
+    const userId = req.payload._id;
 
-//Borrar a un usuario 
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { $addToSet: { favoritos: reservasId } }, 
+        { new: true }
+      ).populate('wishlist');
+  
 
-router.delete("/user/:userId", async (req, res)=>{
-    try {
-        await User.findByIdAndDelete(req.params.userId)
-        res.send("usuario borrado")
-    } catch (error) {
-        console.log(error)
+      res.status(200).json({favoritos: updatedUser.favoritos });
+    }catch (error) {
+      console.log(error)
     }
-})
+  })
 
-//UPDATE
-router.put("/user/:userId", async(req, res)=>{
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //new routes 
+  
+
+
+
+  //----------wishList----------
+
+  router.post("/profile/wishlist", verifyToken, async (req, res, next) => {
     try {
+    
+    const {viviendasId} =req.body;
+    const userId = req.payload._id;
 
-        const response = await User.findByIdAndUpdate(req.params.userId, {
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { $addToSet: { wishlist: viviendasId } }, 
+        { new: true }
+      ).populate('wishlist');
+  
 
-        name: req.body.name,
-        password: req.body.password,
-        email: req.body.email
-
-        }, {new: true})
-
-        res.json(response, "Usuario actualizado")
-        
-    } catch (error) {
-        console.log(error, "No se ha actualizado el usuario")
+      res.status(200).json({wishlist: updatedUser.wishlist });
+    }catch (error) {
+      console.log(error)
     }
+  })
 
-})
+  //delete wishlist
+  router.delete("/profile/wishlist/:viviendasId", verifyToken, async (req, res, next) => {
+    try {
+      const { viviendasId } = req.params;
+      const userId = req.payload._id;
+  
+     
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { $pull: { wishlist: viviendasId } },
+        { new: true }
+      ).populate('wishlist');
+  
+      res.status(200).json({ wishlist: updatedUser.wishlist });
+    } catch (error) {
+      next(error);
+    }
+  });
 
-
-module.exports = router
+module.exports=router;

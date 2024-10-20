@@ -4,10 +4,11 @@ const reservaSchema = new mongoose.Schema({
 
     guestName: {type: String, required: true},
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    email: {type: String, required: true},
+    image: {type: String, required: true},
+    description: {type: String, required: true},
     phone: {type: String, required: true},
     hotelName: {type: String, required: true},
-    city: {type: String, required: true},
+    address: {type: String, required: true},
     roomNumber: {type: Number, required: true},
     checkInDate: { type: Date, required: true },
     checkOutDate: { type: Date, required: true },

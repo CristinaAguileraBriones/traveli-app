@@ -15,7 +15,7 @@ require("./db/index.js")
 const indexRouter = require("./routes/index.routes")
 app.use("/api", indexRouter)
 
-//IMPLEMENTACION DE LA API EXTERNA
+
 
 
 

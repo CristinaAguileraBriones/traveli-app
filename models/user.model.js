@@ -1,12 +1,15 @@
 const { Timestamp } = require("bson")
 const mongoose = require("mongoose")
+const { Schema, model } = mongoose // es necesario esto habiendo importado todo mongoose?
 
 //creacion de esquema
 const userSchema = new mongoose.Schema({
-    name: {type: String, required: [true, "name is required"], unique: true},
-    password: {type: String, required: [true, "password is required"]},
-    email: {type: String, required: [true, "email is required"], unique: true, lowercase: true, trim: true}
-},
+    name: {type: String, required: [true, "el nombre es obligatorio"], unique: true},
+    password: {type: String, required: [true, "la contraseña es obligatoria"]},
+    email: {type: String, required: [true, "El email es obligatorio"], unique: true, lowercase: true, trim: true},
+    profile_image: {type:String, required: [true, 'La imagen es obligatoria.']},
+    favoritos: [{type: Schema.Types.ObjectId, ref: 'Reserva'}]},
+
    {timestamp: true} 
 )
 //creacion de modelo
