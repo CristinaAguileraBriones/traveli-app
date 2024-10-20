@@ -4,7 +4,7 @@ const reservaSchema = new mongoose.Schema({
 
     guestName: {type: String, required: true},
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    image: {type: String, required: true},
+    image: {type: String},
     description: {type: String, required: true},
     phone: {type: String, required: true},
     hotelName: {type: String, required: true},

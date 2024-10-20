@@ -15,7 +15,7 @@ router.get("/", verifyToken, async (req, res, next)=>{
     }
 });
 
-//GET /api/user/profile perfiles de usuario
+//GET /api/user/profile perfiles de usuario //FUNCIONA
 router.get("/profile", verifyToken, async(req, res, next) => {
     
     try{
@@ -29,7 +29,7 @@ router.get("/profile", verifyToken, async(req, res, next) => {
 }
 })
 
-//GET /api/user/:userId buscar individualmente por id a cada usuario
+//GET /api/user/:userId buscar individualmente por id a cada usuario //FUNCIONA
 router.get("/:userId", verifyToken, async (req, res, next)=>{
     try {
         const response = await User.findById(req.params.userId)
@@ -40,7 +40,8 @@ router.get("/:userId", verifyToken, async (req, res, next)=>{
         next(error);
     }
 });
-//PUT /api/user/:userId  Actualizar usuario
+
+//PUT /api/user/:userId  Actualizar usuario FUNCIONA
 router.put("/:userId", verifyToken, async(req, res, next)=>{
     try {
         const response= await User.findByIdAndUpdate( req.params.userId, {
@@ -54,8 +55,8 @@ router.put("/:userId", verifyToken, async(req, res, next)=>{
         next(error)
     }
 })
-//PATCH /api/profile/name actualizar nombre
-router.patch("/profile/username", verifyToken, async (req, res, next) => {
+//PATCH /api/profile/name actualizar nombre FUNCIONA
+router.patch("/profile/name", verifyToken, async (req, res, next) => {
     try {
   
       
@@ -80,7 +81,7 @@ router.patch("/profile/username", verifyToken, async (req, res, next) => {
       next(error);
     }
   });
-//PATCH /api/profile/email actualizar email
+//PATCH /api/profile/email actualizar email FUNCIONA
 router.patch("/profile/email", verifyToken, async (req, res, next) => {
     try {
   
@@ -110,7 +111,7 @@ router.patch("/profile/email", verifyToken, async (req, res, next) => {
 router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
     try {
       const { reservaId } = req.params;
-        const response = await User.find({reserva: reservaId})
+        const response = await User.find({reserva: reservasId})
         .populate('favoritos')
 
         if(response.length === 0) {
