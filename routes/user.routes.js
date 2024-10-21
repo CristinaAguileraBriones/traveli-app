@@ -3,6 +3,7 @@ const router=express.Router();
 const {verifyToken} = require("../middleware/auth.middleware")
 
 const User= require("../models/user.model");
+const Alojamiento = require("../models/alojamiento.model");
 
 //GET todos los usuarios //FUNCIONA 
 router.get("/", verifyToken, async (req, res, next)=>{
@@ -129,28 +130,84 @@ router.get('/profile/favoritos', verifyToken, async (req, res, next) => {
 });
   //añadir a favoritos
 
+  router.post("/profile/favoritos/:alojamientoId", verifyToken, async (req,res,next) =>{
 
-
-
-
-
-  //Actualizar lista de favoritos
-  router.post("/profile/favoritos", verifyToken, async (req, res, next) => {
     try {
-    
-    const {reservasId} =req.body;
-    const userId = req.userId;
 
-      const updatedUser = await User.findByIdAndUpdate(
-        userId,
-        { $addToSet: { favoritos: reservasId } }, 
-        { new: true }
-      ).populate('favoritos');
+      const userId = req.userId;
+      const {alojamientoId} = req.params
+
+      const alojamiento = await Alojamiento.findById(alojamientoId)
+      
+      if(!alojamiento){
+        return res.status(400).json({message: "Alojamiento ya se encuentra en lista de favoritos"})
+      }
+      
+      const user = await User.findById(userId);
+      
+      if(user.favoritos.includes(alojamientoId)){
+        return res.status(400).json({message: "El alojamiento ya se encuentra en su lista de favoritos"})
+      }
+
+      user.favoritos.push(alojamiento);
+      
+      
+      await user.save();
+      
+      res.status(200).json({message: "Alojamiento agregado a favoritos"})
+
+    } catch (error) {
+      next(error);
+    }
+  })
+
+
+  //!Actualizar lista de favoritos
+  // router.put("/profile/favoritos", verifyToken, async (req, res, next) => {
+  //   try {
+    
+  //   const {alojamientoId} =req.body;
+  //   const userId = req.userId;
+
+  //     const updatedUser = await User.findByIdAndUpdate(
+  //       userId,
+  //       { $addToSet: { favoritos: alojamientoId } }, 
+  //       { new: true }
+  //     ).populate('favoritos');
   
 
-      res.status(200).json({favoritos: updatedUser.favoritos });
-    }catch (error) {
-      console.log(error)
+  //     res.status(200).json({favoritos: updatedUser.favoritos });
+  //   }catch (error) {
+  //     console.log(error)
+  //   }
+  // });
+
+  //Eliminar de favoritos
+
+  router.delete("/profile/favoritos/:alojamientoId", verifyToken, async (req,res,next) =>{
+    try {
+
+      const {alojamientoId} = req.params
+      const userId = req.userId
+
+      const deleteFavorito = await User.findByIdAndUpdate(
+        userId,
+        { $pull: { favoritos: alojamientoId } }, 
+        { new: true }
+      ) .populate('favoritos');
+
+      if(!deleteFavorito){
+        return res.status(404).json({message: "Usuario no encontrado"})
+      }
+      
+
+      res.status(200).json({ message: "Actualización de lista de favoritos",favoritos: deleteFavorito.favoritos }); // Responder con la lista actualizada de favoritos
+
+
+    } catch (error) {
+      next(error);
+      console.log(error);
+      
     }
   })
 
