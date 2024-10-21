@@ -11,7 +11,7 @@ app.use(express.static("public"))
 app.use(express.urlencoded({extended: false})) //reconocer llamadas
 
 app.use(cors({
-    origin: (process.env.ORIGIN)
+    origin: [process.env.ORIGIN]
     //puerto de mi proyecto
   }))
 
