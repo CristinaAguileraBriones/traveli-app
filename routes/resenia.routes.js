@@ -70,7 +70,7 @@ router.put("/:reseniaId", verifyToken, async (req, res, next) => {
   }
 });
 
-// DELETE eliminar una reseña por ID
+// DELETE eliminar una reseña por ID //REVISAR
 router.delete("/:reseniaId", verifyToken, async (req, res, next) => {
   try {
     const resenia = await Resenia.findById(req.params.reseniaId);

@@ -110,7 +110,7 @@ router.patch("/profile/email", verifyToken, async (req, res, next) => {
 
 router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
     try {
-      const { reservaId } = req.params;
+      const { reservasId } = req.params;
         const response = await User.find({reserva: reservasId})
         .populate('favoritos')
 
