@@ -108,20 +108,21 @@ router.patch("/profile/email", verifyToken, async (req, res, next) => {
 
 // populate(reservasId)
 
-router.get('/reserva/:reservasId', verifyToken, async (req, res, next) => {
-    try {
-      const { reservasId } = req.params;
-        const response = await User.find({reserva: reservasId})
-        .populate('favoritos')
+router.get('/favoritos', verifyToken, async (req, res, next) => {
+  try {
+  
+    const userId = req.userId;
+    const user = await User.findById(userId).populate('favoritos');
 
-        if(response.length === 0) {
-          return res.status(404).json({message: 'Este alojamiento aún no se ha añadido a ninguna lista de favoritos'})
-        }
-     res.status(200).json(response)
-    }catch(error) {
-      next(error)
+    if (!user || user.favoritos.length === 0) {
+      return res.status(404).json({ message: 'No has añadido alojamientos a la lista de favoritos.' });
     }
-  })
+
+    res.status(200).json(user.favoritos);
+  } catch (error) {
+    next(error);
+  }
+});
 
   router.post("/profile/favoritos", verifyToken, async (req, res, next) => {
     try {
