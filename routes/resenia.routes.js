@@ -3,7 +3,7 @@ const router = express.Router();
 const Resenia = require("../models/resenia.model.js");
 const { verifyToken } = require("../middleware/auth.middleware.js");
 
-// GET todas las reseñas
+// GET todas las reseñas FUNCIONA
 router.get("/", async (req, res, next) => {
   try {
     const response = await Resenia.find()
@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// GET una reseña específica por ID
+// GET una reseña específica por ID FUNCIONA
 router.get("/:reseniaId", async (req, res, next) => {
   try {
     const response = await Resenia.findById(req.params.reseniaId)
@@ -30,7 +30,7 @@ router.get("/:reseniaId", async (req, res, next) => {
   }
 });
 
-// POST nueva reseña
+// POST nueva reseña FUNCIONA
 router.post("/addResenia", verifyToken, async (req, res, next) => {
   try {
     const { comment, rating, alojamientoId } = req.body;
@@ -48,7 +48,7 @@ router.post("/addResenia", verifyToken, async (req, res, next) => {
   }
 });
 
-// PUT actualizar una reseña por ID
+// PUT actualizar una reseña por ID FUNCIONA
 router.put("/:reseniaId", verifyToken, async (req, res, next) => {
   try {
     const { comment, rating } = req.body;
@@ -75,16 +75,16 @@ router.delete("/:reseniaId", verifyToken, async (req, res, next) => {
   try {
     const resenia = await Resenia.findById(req.params.reseniaId);
     
-    if (!Resenia) {
+    if (!resenia) {
       return res.status(404).json({ message: "Reseña no encontrada" });
     }
 
   
-    if (Resenia.userId.toString() !== req.userId) {
+    if (resenia.userId.toString() !== req.userId) {
       return res.status(403).json({ message: "No tienes permiso para eliminar esta reseña" });
     }
 
-    await Resenia.findByIdAndDelete(req.params.reseniaId);
+    await resenia.findByIdAndDelete(req.params.reseniaId);
     res.status(200).json({ message: "Reseña eliminada correctamente" });
   } catch (error) {
     next(error)
