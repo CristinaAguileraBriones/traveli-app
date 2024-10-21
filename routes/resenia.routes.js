@@ -84,7 +84,7 @@ router.delete("/:reseniaId", verifyToken, async (req, res, next) => {
       return res.status(403).json({ message: "No tienes permiso para eliminar esta reseña" });
     }
 
-    await resenia.findByIdAndDelete(req.params.reseniaId);
+    await Resenia.findByIdAndDelete(req.params.reseniaId);
     res.status(200).json({ message: "Reseña eliminada correctamente" });
   } catch (error) {
     next(error)
