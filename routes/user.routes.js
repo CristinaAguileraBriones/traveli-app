@@ -106,9 +106,9 @@ router.patch("/profile/email", verifyToken, async (req, res, next) => {
     }
   });
 
-// populate(reservasId)
+// populate buscar los alojamientos favoritos dentro del perfil de usuario 
 
-router.get('/favoritos', verifyToken, async (req, res, next) => {
+router.get('profile/favoritos', verifyToken, async (req, res, next) => {
   try {
   
     const userId = req.userId;

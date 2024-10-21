@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     password: {type: String, required: [true, "la contraseña es obligatoria"]},
     email: {type: String, required: [true, "El email es obligatorio"], unique: true, lowercase: true, trim: true},
     profile_image: {type:String},
-    favoritos: [{type: Schema.Types.ObjectId, ref: 'Reserva'}]},
+    favoritos: [{type: Schema.Types.ObjectId, ref: 'Alojamiento'}]},
 
     {timestamps: true}
 )
