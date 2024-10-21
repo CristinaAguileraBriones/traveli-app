@@ -9,6 +9,8 @@ const {verifyToken}= require("../middleware/auth.middleware")
 // POST "/api/auth/signup" : crea al usuario con sus datos //FUNCIONA
 router.post("/signup", async (req, res, next) => {
   // Validaciones de backend
+ 
+  console.log(req.body)
   const { name, password, email, profile_image } = req.body;
 
   // Campos obligatorios
@@ -38,6 +40,7 @@ router.post("/signup", async (req, res, next) => {
 
   try {
     //Antes de crear al usuario hay que buscar a otro usuario con los mismos datos
+    console.log("estamos encontrando al usuario")
     const foundUser = await User.findOne({email: email})
     if(foundUser){
         res.status(400).json({ message: "Usuario registrado con ese email" })
@@ -47,7 +50,7 @@ router.post("/signup", async (req, res, next) => {
     const salt = await bcrypt.genSalt(12)
     const hashPassword = await bcrypt.hash(password, salt)
 
-
+    console.log(req.body)
     // Crear el usuario en la base de datos
     await User.create({
       name,
@@ -123,7 +126,7 @@ router.post("/login", async (req, res, next) => {
 })
 
 //GET verify //FUNCIONA
-//protegiendo la ruta con un middleware
+//protegiendo la ruta con un middleware //TODAS LAS LLAMADAS DEBERAN TENER UN VERIFY TOKEN
 router.get("/verify", verifyToken, (req, res)=>{
 
     console.log(req.payload)
@@ -133,7 +136,7 @@ router.get("/verify", verifyToken, (req, res)=>{
 })
 
 
-
+//PONER AQUI LAS RUTAS PRIVADAS DEL USUARIO
 
 
 
