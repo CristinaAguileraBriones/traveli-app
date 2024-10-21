@@ -106,16 +106,20 @@ router.patch("/profile/email", verifyToken, async (req, res, next) => {
     }
   });
 
-// populate buscar los alojamientos favoritos dentro del perfil de usuario 
+// populate buscar los alojamientos favoritos dentro del perfil de usuario FUNCIONA
 
-router.get('profile/favoritos', verifyToken, async (req, res, next) => {
+router.get('/profile/favoritos', verifyToken, async (req, res, next) => {
   try {
   
     const userId = req.userId;
     const user = await User.findById(userId).populate('favoritos');
 
-    if (!user || user.favoritos.length === 0) {
-      return res.status(404).json({ message: 'No has añadido alojamientos a la lista de favoritos.' });
+    if(!user){
+      return res.status(400).json({message: "el usuario no existe"})
+    }
+
+    if ( user.favoritos.length === 0) {
+      return res.status(200).json({ message: 'No has añadido alojamientos a la lista de favoritos.' });
     }
 
     res.status(200).json(user.favoritos);
@@ -123,12 +127,19 @@ router.get('profile/favoritos', verifyToken, async (req, res, next) => {
     next(error);
   }
 });
+  //añadir a favoritos
 
+
+
+
+
+
+  //Actualizar lista de favoritos
   router.post("/profile/favoritos", verifyToken, async (req, res, next) => {
     try {
     
     const {reservasId} =req.body;
-    const userId = req.payload._id;
+    const userId = req.userId;
 
       const updatedUser = await User.findByIdAndUpdate(
         userId,

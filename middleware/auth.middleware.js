@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken")
 
-
 function verifyToken(req, res, next) {
 
   console.log(req.headers)
@@ -11,8 +10,8 @@ function verifyToken(req, res, next) {
     const token = tokenArr[1]
 
     const payload = jwt.verify(token, process.env.TOKEN_SECRET)
-    
     req.payload = payload
+    req.userId = payload._id
 
     next() 
 
