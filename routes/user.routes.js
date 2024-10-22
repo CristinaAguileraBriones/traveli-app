@@ -1,4 +1,5 @@
 const express= require("express");
+const uploadCloud = require('../cloudinary.app')
 const router=express.Router();
 const {verifyToken} = require("../middleware/auth.middleware")
 
@@ -43,12 +44,14 @@ router.get("/:userId", verifyToken, async (req, res, next)=>{
 });
 
 //PUT /api/user/:userId  Actualizar usuario FUNCIONA
-router.put("/:userId", verifyToken, async(req, res, next)=>{
+router.put("/:userId", verifyToken, uploadCloud.single('profile_image'), async(req, res, next)=>{
     try {
+
+        let profile_image = req.file ? req.file.path : req.body.profile_image;
         const response= await User.findByIdAndUpdate( req.params.userId, {
             name:req.body.name,
             favoritos: req.body.favoritos,
-            profile_image: req.body.profile_image
+            profile_image: profile_image
         }, {new: true});
 
         res.status(202).json(response);
@@ -162,25 +165,25 @@ router.get('/profile/favoritos', verifyToken, async (req, res, next) => {
   })
 
 
-  //!Actualizar lista de favoritos
-  // router.put("/profile/favoritos", verifyToken, async (req, res, next) => {
-  //   try {
+  //Actualizar lista de favoritos
+  router.put("/profile/favoritos", verifyToken, async (req, res, next) => {
+    try {
     
-  //   const {alojamientoId} =req.body;
-  //   const userId = req.userId;
+    const {alojamientoId} =req.body;
+    const userId = req.userId;
 
-  //     const updatedUser = await User.findByIdAndUpdate(
-  //       userId,
-  //       { $addToSet: { favoritos: alojamientoId } }, 
-  //       { new: true }
-  //     ).populate('favoritos');
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { $addToSet: { favoritos: alojamientoId } }, 
+        { new: true }
+      ).populate('favoritos');
   
 
-  //     res.status(200).json({favoritos: updatedUser.favoritos });
-  //   }catch (error) {
-  //     console.log(error)
-  //   }
-  // });
+      res.status(200).json({favoritos: updatedUser.favoritos });
+    }catch (error) {
+      console.log(error)
+    }
+  });
 
   //Eliminar de favoritos
 

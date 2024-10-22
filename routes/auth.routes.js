@@ -107,8 +107,11 @@ router.post("/login", async (req, res, next) => {
     // Usuario autenticado -> entregar token
     try {
         const payload = {
-            _id: foundUser._id,
-            email: foundUser.email,
+          _id: foundUser._id,
+          name: foundUser.name,
+          email: foundUser.email,
+          profile_image: foundUser.profile_image
+          
         }
 
         console.log("Payload del token:", payload);
@@ -126,7 +129,7 @@ router.post("/login", async (req, res, next) => {
 })
 
 //GET verify //FUNCIONA
-//protegiendo la ruta con un middleware //TODAS LAS LLAMADAS DEBERAN TENER UN VERIFY TOKEN
+
 router.get("/verify", verifyToken, (req, res)=>{
 
     console.log(req.payload)
@@ -136,7 +139,7 @@ router.get("/verify", verifyToken, (req, res)=>{
 })
 
 
-//PONER AQUI LAS RUTAS PRIVADAS DEL USUARIO
+
 
 
 
