@@ -19,12 +19,12 @@ router.get("/", verifyToken, async (req, res, next)=>{
 
 //GET /api/user/profile perfiles de usuario //FUNCIONA
 router.get("/profile", verifyToken, async(req, res, next) => {
-    
+ 
     try{
-        const { _id, name, password, email, profile_image, favoritos } = req.payload;
+      const { _id, name, password, email, profile_image, favoritos } = req.payload;
     res.status(200).json({
         message: "Datos del usuario",
-        user: { _id,  name, password, email, profile_image, favoritos}
+        user: { _id, name, password, email, profile_image, favoritos }
     })
 }catch(error){
     next(error)

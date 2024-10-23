@@ -110,7 +110,8 @@ router.post("/login", async (req, res, next) => {
           _id: foundUser._id,
           name: foundUser.name,
           email: foundUser.email,
-          profile_image: foundUser.profile_image
+          profile_image: foundUser.profile_image,
+          favoritos: foundUser.favoritos
           
         }
 
