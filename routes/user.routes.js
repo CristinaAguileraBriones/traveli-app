@@ -19,18 +19,16 @@ router.get("/", verifyToken, async (req, res, next)=>{
 
 //GET /api/user/profile perfiles de usuario //FUNCIONA
 router.get("/profile", verifyToken, async(req, res, next) => {
- 
-    try{
-      
-      const { _id, name, password, email, profile_image, favoritos } = req.payload;
-      console.log("!!!!!!!!!!",favoritos)
-    res.status(200).json({
-        message: "Datos del usuario",
-        user: { _id, name, password, email, profile_image, favoritos }
-    })
-}catch(error){
-    next(error)
-}
+  const { _id } = req.payload;
+
+  try {
+    const response = await User.findById(_id);
+    console.log("++++++++++++++++++++++", response)
+    res.status(200).json(response)
+  }
+  catch(error){
+  next(error)
+  }
 })
 
 //GET /api/user/:userId buscar individualmente por id a cada usuario //FUNCIONA
