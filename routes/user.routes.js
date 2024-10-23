@@ -21,7 +21,9 @@ router.get("/", verifyToken, async (req, res, next)=>{
 router.get("/profile", verifyToken, async(req, res, next) => {
  
     try{
+      
       const { _id, name, password, email, profile_image, favoritos } = req.payload;
+      console.log("!!!!!!!!!!",favoritos)
     res.status(200).json({
         message: "Datos del usuario",
         user: { _id, name, password, email, profile_image, favoritos }
@@ -192,7 +194,8 @@ router.get('/profile/favoritos', verifyToken, async (req, res, next) => {
 
       const {alojamientoId} = req.params
       const userId = req.userId
-
+  console.log(alojamientoId)
+  console.log(userId)
       const deleteFavorito = await User.findByIdAndUpdate(
         userId,
         { $pull: { favoritos: alojamientoId } }, 
