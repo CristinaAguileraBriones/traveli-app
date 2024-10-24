@@ -23,7 +23,7 @@ router.get("/profile", verifyToken, async(req, res, next) => {
 
   try {
     const response = await User.findById(_id);
-    console.log("++++++++++++++++++++++", response)
+    
     res.status(200).json(response)
   }
   catch(error){

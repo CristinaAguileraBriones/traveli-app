@@ -24,5 +24,9 @@ router.use("/alojamiento", alojamientoRouter)
 const authRouter = require("./auth.routes")
 router.use("/auth", authRouter)
 
+//CLUDINARY
+const uploadRoutes = require("./cloudinary.routes.js");
+router.use("/upload", uploadRoutes);
+
 
 module.exports = router
