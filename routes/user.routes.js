@@ -50,8 +50,9 @@ router.put("/:userId", verifyToken, uploadCloud.single('profile_image'), async(r
         let profile_image = req.file ? req.file.path : req.body.profile_image;
         const response= await User.findByIdAndUpdate( req.params.userId, {
             name:req.body.name,
+            email: req.body.email,
             favoritos: req.body.favoritos,
-            profile_image: profile_image
+            profile_image: profile_image,
         }, {new: true});
 
         res.status(202).json(response);
