@@ -18,10 +18,6 @@ app.use("/api", indexRouter)
 
 
 
-
-
-
-
 //gestor de errores
 const errorHandling = require("./error-handlers")
 errorHandling(app)
