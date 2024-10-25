@@ -17,6 +17,22 @@ router.get("/", verifyToken, async (req, res, next)=>{
     }
 });
 
+
+router.get("/profile/favoritos", verifyToken, async(req, res, next) => {
+  const { _id } = req.payload;
+
+  try {
+    const response = await User.findById(_id).populate("favoritos");
+    
+    res.status(200).json(response)
+  }
+  catch(error){
+  next(error)
+  }
+})
+
+
+
 //GET /api/user/profile perfiles de usuario //FUNCIONA
 router.get("/profile", verifyToken, async(req, res, next) => {
   const { _id } = req.payload;
