@@ -2,7 +2,8 @@
 
 ¡Ve echándole un vistazo a nuestra app en desarrollo!
 
-## 🏨 App Logo  
+## ![imagen](https://github.com/user-attachments/assets/90d41b7c-ce1f-4cef-b937-637cd2f69ae9)
+
 Este proyecto trata de construir una web de reserva de hoteles de una manera sencilla y rápida para tener a tu alcance tu próximo alojamiento perfecto para descansar.
 
 ---
