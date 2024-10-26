@@ -17,6 +17,19 @@ router.get("/", verifyToken, async (req, res, next) => {
 });
 
 
+router.get("/:reservaId", verifyToken, async (req, res, next) => {
+  try {
+    const userId = req.payload._id;
+    const {reservaId} = req.params;
+    const response = await Reserva.findById(reservaId);
+    res.status(200).json(response)
+
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 // POST nueva reserva FUNCIONA
 
 router.post("/addReserva", verifyToken, async (req, res, next) => {
@@ -70,7 +83,8 @@ router.put("/:reservaId/edit", verifyToken, async (req, res, next) => {
         userId: req.payload._id,  
         checkInDate: req.body.checkInDate,
         checkOutDate: req.body.checkOutDate,
-        numberOfGuests: req.body.numberOfGuests
+        numberOfGuests: req.body.numberOfGuests,
+        alojamiento: req.body.alojamiento
       },
       { new: true }
     );
