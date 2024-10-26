@@ -2,7 +2,7 @@ const express= require("express");
 const uploadCloud = require('../cloudinary.app')
 const router=express.Router();
 const {verifyToken} = require("../middleware/auth.middleware")
-
+const Reserva = require("../models/reserva.model")
 const User= require("../models/user.model");
 const Alojamiento = require("../models/alojamiento.model");
 
@@ -230,6 +230,19 @@ router.get('/profile/favoritos', verifyToken, async (req, res, next) => {
       console.log(error);
       
     }
+  })
+
+  
+  router.delete("/loggeduser", verifyToken, async(req,res,next)=>{
+    const userId = req.payload._id
+    try {
+      await Reserva.deleteMany({userId:userId});
+      const response = await User.findByIdAndDelete(userId)
+       res.status(200).json({ message: "Usuario eliminado correctamente"})
+    } catch (error) {
+      next(error)
+    }
+
   })
 
 
