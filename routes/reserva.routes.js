@@ -8,7 +8,7 @@ router.get("/", verifyToken, async (req, res, next) => {
   try {
     const userId = req.payload._id; 
 
-    const reservas = await Reserva.find({ userId }).populate({path:'alojamiento', select:'image description hotelName address'});
+    const reservas = await Reserva.find({ userId }).populate({path:'alojamiento', select:'image description name address'});
 
     res.status(200).json(reservas); 
   } catch (error) {
